@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>早押し勘定科目</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+
+  <body>
+    <div class="top-screen">
+      <div class="t-title">
+        <span class="t-s">早押し</span><br>
+        <span class="t-letter">勘</span>
+        <span class="t-letter">定</span>
+        <span class="t-letter">科</span>
+        <span class="t-letter">目</span>
+      </div>
+      <p class="t-desc">レベルを選んでSTART<br>（制限時間は3秒以内！）</p>
+      <p class="boki-start" id="boki-3">3級レベル</p>
+      <p class="boki-start" id="boki-2">2級レベル</p>
+      <a href="#" id="pp-link">プライバシーポリシー</a>
+    </div>
+    <div class="quiz-screen">
+      <header>
+        <h1 class="header">早押し勘定科目</h1>
+        <p>
+          <span id="before-finish">
+            あと<span id="q-remaining"></span>問<span id="suspend-btn">終了</span>
+          </span>
+          <span id="back-btn">戻る</span>
+        </p>
+      </header>
+      <div class="contents">
+        <div class="main">
+          <p class="question">この勘定科目が表示される場所は？</p>
+          <h1 id="account"></h1>
+          <h2 id="account-note"></h2>
+          <div class="bs">
+            <h2>貸借対照表</h2>
+            <div class="bs-btn">
+              <h3 class="btn" id="assets">資産</h3>
+              <div class="bs-btn2">
+                <h3 class="btn" id="debt">負債</h3>
+                <h3 class="btn" id="net-assets">純資産</h3>
+              </div>
+            </div>
+          </div>
+          <div class="right"></div>
+          <div class="wrap-wrong">
+            <div class="wrong">
+              <span></span>
+            </div>
+          </div>
+          <div class="pl">
+            <h2>損益計算書</h2>
+            <div class="pl-btn">
+              <h3 class="btn" id="loss">費用</h3>
+              <h3 class="btn" id="profit">収益</h3>
+            </div>
+          </div>
+        </div>
+        <div class="result">
+          <div class="chartWithOverlay">
+            <div id="pie_chart"></div>
+            <div class="overlay">
+              <div style="font-size: 16px; font-weight: bold; color: #3a3a3a;">正解済み<br>
+                <span style="font-size: 25px;" id="rights-rate"></span>
+                <span style="font-size: 16px;">&nbsp;%</span>
+              </div>
+            </div>
+          </div>
+          <div class="result-btns">
+            <button type="button" id="q-yet" class="q-again">未正解の問題</button>
+            <button type="button" id="q-all" class="q-again">すべての問題</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>

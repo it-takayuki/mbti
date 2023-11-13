@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  color: #fff;
+  background-color: #4169e1;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+header p {
+  font-size: 20px;
+}
+
+#suspend-btn, #back-btn {
+  border: 3px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+#back-btn {
+  display: none;
+}
+
+.main {
+  position: relative;
+}
+
+.question {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+  
+#account {
+  margin-top: 15px;
+  text-align: center;
+}
+  
+#account-note {
+  text-align: center;
+  color: #606060;
+}
+  
+.bs {
+  margin-top: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #99ccff;
+  padding-top: 15px;
+  position: relative;
+}
+  
+.bs h2 {
+  text-align: center;
+  font-weight: normal;
+}
+  
+.bs-btn {
+  display: flex;
+  justify-content: space-around;
+}
+  
+.bs-btn2 {
+  margin: 15px 0;
+}
+  
+.bs-btn h3 {
+  font-weight: normal;
+  font-size: 30px;
+  border-radius: 5px;
+}
+  
+#assets {
+  background-color: #ffff7f;
+  padding: 45px 40px;
+  margin: 15px 0;
+}
+  
+#debt {
+  background-color: #bf7fff;
+  padding: 10px 35px;
+  text-align: center;
+}
+  
+#net-assets {
+  margin-top: 12px;
+  background-color: #7fffff;
+  padding: 10px 35px;
+  text-align: center;
+}
+  
+.pl {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #ffcc99;
+  padding-top: 15px;
+}
+  
+.pl h2 {
+  text-align: center;
+  font-weight: normal;
+}
+  
+.pl-btn {
+  display: flex;
+  justify-content: space-around;
+}
+  
+.pl-btn h3 {
+  font-weight: normal;
+  padding: 20px 45px;
+  font-size: 30px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+  
+#loss {
+  background-color: #bfff7f;
+}
+  
+#profit {
+  background-color: #ff7f7f;
+}
+  
+.right {
+  width: 180px;
+  height: 180px;
+  border: solid #ff0000 20px;
+  border-radius: 50%;
+}
+
+.wrap-wrong {
+  width: 210px;
+  height: 240px;
+}
+
+.right, .wrap-wrong {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: none;
+}
+
+.wrong {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+  
+.wrong span::before, .wrong span::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 84%;
+  height: 10%;
+  margin: -12% 0 0 -55%;
+  background-color: #0000ff;
+}
+  
+.wrong span::before {
+  transform: rotate(-45deg);
+}
+  
+.wrong span::after {
+  transform: rotate(45deg);
+}
+ 
+.btn {
+  cursor: pointer;
+}
+
+.contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chartWithOverlay {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto; 
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.result {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+  height: 100%;
+}
+
+.result-btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.result-btns button {
+  font-size: 20px;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+#q-yet {
+  background-color: #ffd150;
+  box-shadow: 0 5px 0 #ffc41d;
+  border-radius: 60px;
+  color: #fff;
+}
+
+#q-all {
+  background-color: #34b496;
+  box-shadow: 0 5px 0 #298c75;
+  border-radius: 60px;
+  color: #fff;
+}
+
+.quiz-screen {
+  display: none;
+}
+
+.top-screen {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.t-title {
+  font-size: 4vh;
+}
+
+.t-title br {
+  display: block;
+  content: "";
+  height: 3.5vh;
+}
+
+.t-title .t-letter {
+  color: #fff;
+  background-color: #4169e1;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.t-desc {
+  position: relative;
+  padding-left: 25px;
+  width: 75%;
+  margin: 0 auto;
+  font-size: 2.25vh;
+}
+
+.t-desc:before {
+  position: absolute;
+  content: '';
+  bottom: -3.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 25px transparent;
+  border-bottom: solid 25px rgb(119, 195, 223);
+}
+
+.t-desc:after {
+  position: absolute;
+  content: '';
+  bottom: -3.5px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3.5px rgb(119, 195, 223);
+}
+
+.boki-start {
+  font-size: 3.5vh;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px;
+  cursor: pointer;
+  text-shadow: black 2px 0px,  black -2px 0px,
+  black 0px -2px, black 0px 2px,
+  black 2px 2px , black -2px 2px,
+  black 2px -2px, black -2px -2px,
+  black 1px 2px,  black -1px 2px,
+  black 1px -2px, black -1px -2px,
+  black 2px 1px,  black -2px 1px,
+  black 2px -1px, black -2px -1px;
+}
+
+#boki-3 {
+  background-color: #ffd150;
+}
+
+#boki-2 {
+  background-color: #34b496;
+}
+
+#pp-link {
+  color: #0000EE;
+}
+
+@media (min-width: 1100px) {
+  .main {
+    width: 50vw;
+  }
+  .contents {
+    margin-top: 30px;
+  }
+  .question {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .contents {
+    flex-direction: column;
+  }
+  .result {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    width: 100vw;
+  }
+  header {
+    justify-content: space-between;
+  }
+  .header, header p {
+    font-size: 16px;
+  }
+  #account {
+    font-size: 28px;
+  }
+  #account-note {
+    font-size: 20px;
+  }
+  .bs h2, .pl h2 {
+    font-size: 20px;
+  }
+  .bs-btn h3, .pl-btn h3 {
+    font-size: 26px;
+  }
+  .result-btns {
+    flex-direction: column;
+  }
+  .result-btns button {
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 350px) {
+  #account {
+    font-size: 22px;
+  }
+  #account-note {
+    font-size: 14px;
+  }
+  .bs h2, .pl h2 {
+    font-size: 14px;
+  }
+  .bs-btn h3, .pl-btn h3 {
+    font-size: 20px;
+  }
+  .right {
+    width: 150px;
+    height: 150px;
+  }
+  .wrap-wrong {
+    width: 175px;
+    height: 200px;
+  }
+  .wrong {
+    width: 234px;
+    height: 234px;
+  }
+}
+  
