@@ -1,1 +1,1 @@
-# boki_hayaoshi
+# mbti
